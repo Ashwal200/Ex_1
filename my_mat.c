@@ -16,25 +16,25 @@ for(int i = 0; i < 3; i++)
             scanf("%3d", & matrix[i][j]);
         }
     }    
-    // for (int i = 0; i < 3; i++)
-    // {
-    //     for (int j = 0; j < 3; j++)
-    //     {
-    //         if (matrix[i][j] == 0)
-    //         {
-    //             matrix[i][j] = INT_MAX;
-    //         }
-    //     }
-    // }
-
-    for(int i = 0; i < 3; i++)
+    for (int i = 0; i < 3; i++)
     {
-        for(int j = 0; j < 3; j++)
+        for (int j = 0; j < 3; j++)
         {
-                printf("%3d", matrix[i][j]);
+            if (matrix[i][j] == 0)
+            {
+                matrix[i][j] = -1;
+            }
         }
-        printf("\n");
     }
+
+    // for(int i = 0; i < 3; i++)
+    // {
+    //     for(int j = 0; j < 3; j++)
+    //     {
+    //             printf("%3d", matrix[i][j]);
+    //     }
+    //     printf("\n");
+    // }
 }
 
 //If there isn't a path between the index's return False , Otherwise return True.
@@ -69,7 +69,10 @@ void matPath(){
             {
                 for (int j = 0; j < 3; j++)
                 {
-                    matrix[i][j] = min(matrix[i][j] , matrix[i][k] + matrix[k][j]);
+                    if (matrix[i][j] != -1)
+                    {
+                        matrix[i][j] = min(matrix[i][j] , matrix[i][k] + matrix[k][j]);
+                    }
                 }
             }
         }
