@@ -27,7 +27,7 @@ else if (strcmp(answer, c)==0)
 }
 while (strcmp(answer, d) != 0);
 {
-    printf("You are out!\n");
+   return 0; 
 }
-return 0;
+
 }
