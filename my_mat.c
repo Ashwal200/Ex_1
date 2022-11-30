@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 #include <limits.h>
-int matrix [3][3];
+int matrix [10][10];
 int max = INT_MIN;
 int min(int a , int b){
     return (a > b) ? b : a ;
@@ -10,9 +10,9 @@ int min(int a , int b){
 //Option A
 void matBuild(){
     
-for(int i = 0; i < 3; i++)
+for(int i = 0; i < 10; i++)
     {
-        for(int j = 0; j < 3; j++)
+        for(int j = 0; j < 10; j++)
         {
             scanf("%3d", & matrix[i][j]);
             if (max < matrix[i][j])
@@ -23,9 +23,9 @@ for(int i = 0; i < 3; i++)
         }
     }
     max++;    
-    for (int i = 0; i < 3; i++)
+    for (int i = 0; i < 10; i++)
     {
-        for (int j = 0; j < 3; j++)
+        for (int j = 0; j < 10; j++)
         {
             if (matrix[i][j] == 0)
             {
@@ -70,11 +70,11 @@ void matPath(){
         printf("%d\n" , -1);
     }
     else {
-    for (int k = 0; k < 3; k++)
+    for (int k = 0; k < 10; k++)
         {
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < 10; i++)
             {
-                for (int j = 0; j < 3; j++)
+                for (int j = 0; j < 10; j++)
                 {
                     // if (matrix[i][j] != -1)
                     // {
