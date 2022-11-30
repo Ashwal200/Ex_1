@@ -48,7 +48,20 @@ for(int i = 0; i < 10; i++)
 //Option B
 void matTrue(){
     int numI , numJ;
-    scanf("%d%d" , & numI , &numJ);      
+    scanf("%d%d" , & numI , &numJ);
+    for (int k = 0; k < 10; k++)
+        {
+            for (int i = 0; i < 10; i++)
+            {
+                for (int j = 0; j < 10; j++)
+                {
+                    // if (matrix[i][j] != -1)
+                    // {
+                        matrix[i][j] = min(matrix[i][j] , matrix[i][k] + matrix[k][j]);
+                    // }
+                }
+            }
+        }      
     if ( matrix[numI][numJ] == max)
         {
         printf("False\n");
