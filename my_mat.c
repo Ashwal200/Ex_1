@@ -55,10 +55,10 @@ void matTrue(){
             {
                 for (int j = 0; j < 10; j++)
                 {
-                    // if (matrix[i][j] != -1)
-                    // {
+                    if (matrix[i][j] != max)
+                    {
                         matrix[i][j] = min(matrix[i][j] , matrix[i][k] + matrix[k][j]);
-                    // }
+                    }
                 }
             }
         }      
@@ -78,7 +78,7 @@ void matPath(){
     int numI , numJ ;
     scanf("%d%d" , & numI , &numJ); 
 
-    if (numI == numJ)
+    if (matrix[numI][numJ] == max)
     {
         printf("%d\n" , -1);
     }
@@ -89,10 +89,10 @@ void matPath(){
             {
                 for (int j = 0; j < 10; j++)
                 {
-                    // if (matrix[i][j] != -1)
-                    // {
+                    if (matrix[i][j] != max)
+                    {
                         matrix[i][j] = min(matrix[i][j] , matrix[i][k] + matrix[k][j]);
-                    // }
+                    }
                 }
             }
         }
