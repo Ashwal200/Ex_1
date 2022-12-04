@@ -113,19 +113,6 @@ void matPath(){
     }
     
     else {
-    for (int k = 0; k < 10; k++)
-        {
-            for (int i = 0; i < 10; i++)
-            {
-                for (int j = 0; j < 10; j++)
-                {
-                    if (matrix[i][j] != max)
-                    {
-                        matrix[i][j] = min(matrix[i][j] , matrix[i][k] + matrix[k][j]);
-                    }
-                }
-            }
-        }
         printf("%d\n" , matrix[numI][numJ]);
     }
 }
