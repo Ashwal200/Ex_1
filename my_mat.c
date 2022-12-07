@@ -2,9 +2,9 @@
 #include <math.h>
 #include <limits.h>
 int matrix [10][10];
-int matrix1 [10][10];
-int max = INT_MIN;
-int max1 = INT_MIN;
+
+int max = INT_MAX;
+
 int min(int a , int b){
     return (a > b) ? b : a ;
 }
@@ -24,24 +24,8 @@ for(int i = 0; i < 10; i++)
             
         }
     }
-    for (int k = 0; k < 10; k++)
-        {
-            for (int i = 0; i < 10; i++)
-            {
-                for (int j = 0; j < 10; j++)
-                {
 
-                    matrix1[i][j] = min(matrix[i][j] , matrix[i][k] + matrix[k][j]);
-
-                    if (max1 < matrix1[i][j])
-                    {
-                        max1 = matrix1[i][j];
-                    }
-
-                }
-            }
-        } 
-    max = max + max1 +1;    
+     
     for (int i = 0; i < 10; i++)
     {
         for (int j = 0; j < 10; j++)
@@ -75,10 +59,10 @@ void matTrue(){
             {
                 for (int j = 0; j < 10; j++)
                 {
-
+                    if ( matrix[i][k] != max && matrix[j][k] != max )
+                    {
                         matrix[i][j] = min(matrix[i][j] , matrix[i][k] + matrix[k][j]);
-
- 
+                    }
                 }
             }
         }      
