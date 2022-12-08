@@ -1,33 +1,32 @@
 #include <stdio.h>
 #include <string.h>
 #include "my_mat.h"
+#define END_OF_PROGRAM 0
 
 
 int main(){
-char answer[2];
-char a[] = "A";
-char b[] = "B"; 
-char c[] = "C"; 
-char d[] = "D";  
+char user_input;  
 do{
-    scanf("%s" , answer);
+    scanf("%c" , &user_input);
+   
+    switch (user_input)
+    {
+    case 'A':
+        matBuild();
+        break;
 
-    if (strcmp(answer, a) == 0)
-{
-    matBuild();
+    case 'B':
+        matTrue();
+        break;
+        
+    case 'C':
+        matPath();
+        break;
+    }
 }
-else if (strcmp(answer, b)==0)
+while (user_input != 'D');
 {
-    matTrue();
-}
-else if (strcmp(answer, c)==0)
-{
-    matPath();
-}
-}
-while (strcmp(answer, d) != 0);
-{
-   return 0; 
+   return END_OF_PROGRAM; 
 }
 
 }
