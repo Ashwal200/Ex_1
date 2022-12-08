@@ -1,8 +1,9 @@
 #include <stdio.h>
 #include <math.h>
 #include <limits.h>
-#define NO_EDGE 0
-int matrix [10][10];
+#include "my_mat.h"
+
+int matrix [SIZE_OF_MATRIX][SIZE_OF_MATRIX];
 
 
 void print_the_global_matrix(){
@@ -24,7 +25,7 @@ int min(int a , int b){
 
 //Build the matrix from the user numbers.
 //Option A
-void matBuild(){
+void mat_build(){
     
 for(int i = 0; i < 10; i++)
     {
@@ -66,7 +67,7 @@ void global_matrix_builder(){
 
 //If there isn't a path between the index's return False , Otherwise return True.
 //Option B
-void matTrue(){
+void mat_true(){
 
     int numI , numJ;
     scanf("%d%d" , &numI , &numJ);
@@ -90,7 +91,7 @@ void matTrue(){
 
 //Find the shortest path between two index's , and return the value.
 //Option C
-void matPath(){
+void mat_path(){
     int numI , numJ ;
     scanf("%d%d" , &numI , &numJ); 
 

@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include "my_mat.h"
-#define END_OF_PROGRAM 0
+
 
 
 int main(){
@@ -12,15 +12,15 @@ do{
     switch (user_input)
     {
     case 'A':
-        matBuild();
+        mat_build();
         break;
 
     case 'B':
-        matTrue();
+        mat_true();
         break;
         
     case 'C':
-        matPath();
+        mat_path();
         break;
     }
 }
