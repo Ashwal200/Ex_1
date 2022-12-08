@@ -1,22 +1,7 @@
 #include <stdio.h>
-#include <math.h>
-#include <limits.h>
 #include "my_mat.h"
 
 int matrix [SIZE_OF_MATRIX][SIZE_OF_MATRIX];
-
-
-void print_the_global_matrix(){
-
-    for(int i = 0; i < 10; i++)
-    {
-        for(int j = 0; j < 10; j++)
-        {
-                printf("%3d", matrix[i][j]);
-        }
-        printf("\n");
-    }
-}
 
 
 int min(int a , int b){
@@ -60,7 +45,6 @@ void global_matrix_builder(){
                 }
             }
         }
-
 }
 
 
@@ -85,8 +69,6 @@ void mat_true(){
         {
         printf("True\n");
         }
-
-    //print_the_global_matrix();
 }
 
 //Find the shortest path between two index's , and return the value.
@@ -111,16 +93,4 @@ void mat_path(){
 
 
 
-
-
-//   0  0  1  0  0  0  0  0  6  0
-//   0  0  2  0  0  0  0  0  0  2
-//   1  2  0  4  0  0  1  2  0  0
-//   0  0  4  0  0  4  0  0  0  3
-//   0  0  0  0  0  1  0  0  7  0
-//   0  0  0  4  1  0  3  0  0  0
-//   0  0  1  0  0  3  0  3  0  0  
-//   0  0  2  0  0  0  3  0  0  0  
-//   6  0  0  0  7  0  0  0  0  0  
-//   0  2  3  0  0  0  0  0  0  0  
 
