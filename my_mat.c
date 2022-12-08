@@ -33,7 +33,7 @@ for(int i = 0; i < 10; i++)
             scanf("%d", &matrix[i][j]);
         }
     }
-    global_matrix_builder();
+    //global_matrix_builder();
 }
 
 void global_matrix_builder(){
@@ -85,7 +85,7 @@ void matTrue(){
         printf("True\n");
         }
 
-        print_the_global_matrix();
+    //print_the_global_matrix();
 }
 
 //Find the shortest path between two index's , and return the value.
